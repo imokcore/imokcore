@@ -6,9 +6,6 @@ DEBUG = False
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-with open('/secrets/ImOkCore.password', 'r') as secret:
-    db_password = secret.read().strip()
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
