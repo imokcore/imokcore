@@ -5,15 +5,14 @@ function im_ok(element, id) {
         }
     });
 
-
     $.ajax({
-        url: 'api/v1/member/1/',
+        url: 'api/v1/member/' + id + '/',
         type: 'PATCH',
         dataType: "json",
         data: JSON.stringify({id: id, should_be_contacted: false}),
         contentType: "application/json",
-        success: function (element) {
-            $('.button').html(element);
+        success: function () {
+            $('.button .circle h1').html('Clicked :)');
         }
     });
 }
