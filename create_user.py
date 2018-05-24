@@ -2,7 +2,7 @@ import os
 
 from django import setup
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings.dev'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings.prod'
 setup()
 
 from service.models import Member
