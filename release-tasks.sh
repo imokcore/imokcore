@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echp Migrate
+echo Migrate
 python manage.py migrate
 
 echo Creating users
