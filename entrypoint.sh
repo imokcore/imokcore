@@ -21,4 +21,4 @@ echo Creating users
 python create_user.py
 
 echo Starting Gunicorn.
-gunicorn project.wsgi --name im-ok-core-service --bind :8080 --workers 3 --access-logfile "-" --error-logfile "-"
+gunicorn project.wsgi --name im-ok-core-service --workers 3 --access-logfile "-" --error-logfile "-"
