@@ -1,3 +1,5 @@
+import dj_database_url
+
 from .base import *
 
 DEBUG = False
@@ -9,13 +11,10 @@ with open('/secrets/ImOkCore.password', 'r') as secret:
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'im-ok-core-db',
-        'USER': 'im-ok-core',
-        'PASSWORD': db_password,
-        'HOST': 'tbd',
-        'PORT': '5432',
-        'CONN_MAX_AGE': 30
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)

@@ -1,13 +1,17 @@
 #!/usr/local/bin/dumb-init /bin/sh
 
-if [ "$STARBUG_CLUSTER" = 'eu-production' -o "$STARBUG_CLUSTER" = 'eu-staging' ]; then
-    echo "Running in prod"
-    export DJANGO_SETTINGS_MODULE='project.settings.prod'
+echo "Running in prod"
+export DJANGO_SETTINGS_MODULE='project.settings.prod'
 
-else
-    echo "Running in dev"
-    export DJANGO_SETTINGS_MODULE='project.settings.dev'
-fi
+
+#if [ "$STARBUG_CLUSTER" = 'eu-production' -o "$STARBUG_CLUSTER" = 'eu-staging' ]; then
+#    echo "Running in prod"
+#    export DJANGO_SETTINGS_MODULE='project.settings.prod'
+#
+#else
+#    echo "Running in dev"
+#    export DJANGO_SETTINGS_MODULE='project.settings.dev'
+#fi
 
 python manage.py migrate
 python manage.py collectstatic --clear --noinput
