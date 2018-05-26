@@ -12,7 +12,8 @@ class Member(models.Model):
     should_be_contacted = models.BooleanField(default=True)
 
     def save(self, *args, **kwargs):
+        if self._state.adding:
+            send_mail('Welcome to Healthy Living', 'Dear {}, Welcome to Healthy Living!'.format(self.name),
+                      'imokcore@gmail.com', [self.email], fail_silently=False)
+
         super(Member, self).save(*args, **kwargs)
-        print('sending mail to: {}'.format(self.email))
-        # send_mail('Welcome to Healthy Living', 'Dear {}, Welcome to Healthy Living!'.format(self.name),
-        #           'imokcore@gmail.com', [self.email], fail_silently=False)
