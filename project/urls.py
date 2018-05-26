@@ -30,7 +30,7 @@ urlpatterns = [
     path('api/v1/', include('service.urls')),
     path('admin/', admin.site.urls),
     path('docs/', include_docs_urls(title='Im Ok Core')),
-    path('', RedirectView.as_view(url=reverse_lazy('api-docs:docs-index'), permanent=False)),
+    path('', RedirectView.as_view(url=reverse_lazy(views.button), permanent=False)),
 ]
 
 if settings.DEBUG:

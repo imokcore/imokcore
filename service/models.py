@@ -13,5 +13,6 @@ class Member(models.Model):
 
     def save(self, *args, **kwargs):
         super(Member, self).save(*args, **kwargs)
-        send_mail('Welcome to Healthy Living', 'Dear {}, Welcome to Healthy Living!'.format(self.name),
-                  'imokcore@gmail.com', [self.email], fail_silently=False)
+        print('sending mail to: {}'.format(self.email))
+        # send_mail('Welcome to Healthy Living', 'Dear {}, Welcome to Healthy Living!'.format(self.name),
+        #           'imokcore@gmail.com', [self.email], fail_silently=False)
