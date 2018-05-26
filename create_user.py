@@ -16,7 +16,7 @@ u2 = User.objects.create_user(username='Gabor', password='123')
 u2.save()
 print('created Gabor')
 
-m = Member(user=u2, name='Gabor Racz1', phone='123123', button_id=4701, should_be_contacted=True,
+m = Member(user=u2, name='Gabor Racz', phone='123123', button_id=4701, should_be_contacted=True,
            email='blackspike182@gmail.com')
 m.save()
 
