@@ -3,13 +3,13 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from django.conf import settings
 from django.core import management
 
-settings.configure()
 django.setup()
+settings.configure()
 
 sched = BlockingScheduler()
 
 
-@sched.scheduled_job('interval', minutes=3)
+@sched.scheduled_job('interval', minutes=1)
 def timed_job():
     print('Run generate_call_list')
     management.call_command('generate_call_list')
