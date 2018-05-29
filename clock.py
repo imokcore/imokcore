@@ -1,6 +1,8 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
+from django.conf import settings
 from django.core import management
 
+settings.configure()
 sched = BlockingScheduler()
 
 
