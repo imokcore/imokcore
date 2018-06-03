@@ -10,7 +10,7 @@ django.setup()
 sched = BlockingScheduler()
 
 
-@sched.scheduled_job('cron', day_of_week='mon-fri', hour=22)
+@sched.scheduled_job('cron', day_of_week='mon-fri', hour=22, minute=5)
 def scheduled_job():
     print('Run generate_call_list')
     management.call_command('generate_call_list')
