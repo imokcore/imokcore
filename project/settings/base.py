@@ -126,3 +126,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'imokcore@gmail.com'
 EMAIL_HOST_PASSWORD = 'tempw123'  # TODO remove this
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+SESSION_COOKIE_AGE = 900
+
