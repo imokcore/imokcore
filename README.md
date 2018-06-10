@@ -1,5 +1,5 @@
 # ImOkCore
-Welcome to ImOkCore documentation. This is a small django project with a rest API, and a management command to write google sheets. It is deployed using heroku, and the scheduling is handled by zapier.
+Welcome to ImOkCore documentation. This is a small django project with a rest API, and a management command to write google sheets. It is deployed using Heroku, and the scheduling is handled by Zapier.
 The address of the web service is: www.imokcore.heroku.com
 
 ## How to use
@@ -15,12 +15,12 @@ As a member of the program follow these steps:
 * Step 5: Feel accomplished
 
 ### For Admins
-As an admin, your main use of the site is to add or remove members from the program. Rembember to only delete a member if you have clear, written confirmation from the project lead. Also remember, in order to add new member, you need the following information: name, username, password, email address and phone number.
+As an admin, your main use of the site is to add or remove members from the program. Remember to only delete a member if you have clear, written confirmation from the project lead. Also remember, in order to add new member, you need the following information: name, username, password, email address and phone number.
 * Step 0: Have the developer add you as an admin
 * Step 1: Go to www.imokcore.heroku.com/admin
 * Step 2: Log in using the username and password set by your developer
 * Step 3a: To add a new member, select "Add" in the row with "Users"
-* Step 4a: Fill out all fields, then click "Save" in the botton right corner, or "Save and add another" if you would like to add multiple members
+* Step 4a: Fill out all fields, then click "Save" in the button right corner, or "Save and add another" if you would like to add multiple members
 
 * Step 3b: To remove an existing member, select "Change" in the row with "Users"
 * Step 4b: Find the member using the table or the search function
