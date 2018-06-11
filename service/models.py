@@ -15,7 +15,7 @@ class Member(models.Model):
         if self._state.adding:
             send_mail('Welcome to Healthy Living',
                       'Dear {}, Welcome to Healthy Living! '
-                      'Please visit wwww.imokcore.heroku.com to start your program!'.format(self.name),
+                      'Please visit www.imokcore.heroku.com to start your program!'.format(self.name),
                       'imokcore@gmail.com', [self.email], fail_silently=False)
 
         super(Member, self).save(*args, **kwargs)
