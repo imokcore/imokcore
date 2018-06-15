@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Oleo+Script);
+
 .topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #61E786;
     overflow: hidden;
 }
